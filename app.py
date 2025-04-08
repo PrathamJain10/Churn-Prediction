@@ -212,6 +212,7 @@ def build_model(df):
             
             # Save model to disk
             if st.button("Save Model to Disk"):
+                # Create directory if it doesn't exist
                 directory = 'models'
                 os.makedirs(directory, exist_ok=True)
                 filepath = os.path.join(directory, 'churn_prediction_model.pkl')
